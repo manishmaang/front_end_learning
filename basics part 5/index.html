@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry Assignment</title>
 </head>
+
 <body>
-    <form action="post" method="post">
+    <!-- <form action="post" method="post">
         <div>
             <label for="name">enter your name</label>
             <input type="text" name="name" id="name" placeholder="enter your name">
@@ -21,6 +23,26 @@
             <label for="pincode">enter your pincode</label>
             <input type="text" name="pincode" id="pincode" placeholder="enter your pincode">
         </div>
-    </form>
+    </form> -->
+
+    <video src="./sample-5s.mp4" controls width="200" muted poster="../basics part 3/GOKU.png">sample video</video>
+    <!-- other attributes are autoplay, loop (plays video in loop), controls provide the controls for video like play pause sound playback etc etc otherwise there will be no option to control the video or start if autoplay is not enabled -->
+
+    <!-- same goes with the audio element need to add controls as well -->
+
+    <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+
+    <img src="./image.svg" alt="nothing to show">
+    <!-- xmlns="http://www.w3.org/2000/svg" if i remove this line from svg attribute in image file then image won't show -->
+
+
+    <!-- iframe is used to embed another HTML page (webpage) within the current page -->
+    <iframe src="https://www.codewithharry.com/tutorial/working-with-svg" frameborder="0"></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=iml-_L-dgmEerBd4&amp;start=785" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- youtube feature -->
 </body>
+
 </html>
