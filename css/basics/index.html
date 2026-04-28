@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors Learning</title>
+
+    <style>
+        /* element selector => will select all the div elements in that webpage */ 
+        div {
+            background-color: lightblue;
+        }
+
+        /* child selector => will select all the p elements that are direct children of div elements */ 
+        div > p {
+            color: yellow;
+        }
+        /* to see this in action comment the descendant selector and uncomment the child selector and see the difference */  
+
+        /* descendant selector => will select all the p elements that are descendants of div elements */
+        div p {
+            color: green;
+        } 
+        
+        
+
+        /* class selector => will select all the elements that have the class name red */
+        .red {
+            background-color: red;
+        }
+
+        /* universal selector => will select all elements in the webpage */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* id selector => will select the element with the id "white" */
+        #white {
+            color: white;
+        }
+
+        /* pseudo-class selector => Pseudo-selectors are used to apply styles based on state/condition or to target a specific part of any element without changing HTML.
+        
+        👉 Pseudo-class = kab (when) (:)
+        👉 Pseudo-element = kaha (where) (::)
+        */
+        a:visited {
+            color: green;
+        }
+        a:link{
+            color: pink;
+        }
+
+        /* jha jha p first child hai wha wha bg color aqua ho jaye */
+        p:first-child{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Css Selectors Learning</h1>
+    </header>
+    <main>
+        <div>
+            I'm a div element 
+            <p>I'm a paragraph element inside the div</p>
+            <article>
+                <p>I'm a paragraph element inside the article but not a direct child of the div therefore child selector will not apply to me</p>
+            </article>
+        </div>
+        <div class="red">
+            I'm another div element
+            <p id="white">I'm a paragraph element inside the red div</p> 
+        </div>
+
+        <a href="https://google.com">Go to Google</a>
+        <br>
+        <a href="https://facebook.com">Go to Facebook</a>
+
+        <div>
+            <p>i'm first child inside the </p>
+            <p>i'm second child inside the div</p>
+        </div>
+    </main>
+</body>
+</html>
