@@ -1,0 +1,39 @@
+<!-- learning forms -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARNING FORMS</title>
+</head>
+
+<body>
+    <h1>form practive</h1>
+
+    <!-- method defines how data is sent (GET = URL, POST = body), action defines where the data is sent (server endpoint) -->
+    <form action="post" method="post">
+        <div>
+            <label for="first_name">enter your first name</label>
+            <input type="text" name="frist_name" id="first_name" placeholder="enter your first name">
+        </div>
+
+        <div>
+          <label for="">select your gender</label>
+
+          <!-- server me jo values jayega vo key value form me jayega jisme key is name and value is value -->
+          <input type="radio" name="gender" id="male"  value="male">
+          <label for="male">male</label>
+          <input type="radio" name="gender" id="female" value="female">
+          <label for="female">female</label>
+
+
+          <!-- if I change the name of input from gender to male and female then both options can be selected and then can't be de-selected -->
+           <!-- if i change the lable for of female to something else which is not in id of input then clicking on female won't select the radio i will specifically have to click on radio to select it since their link is lost -->
+        </div>
+    </form>
+    <br>
+        there are more input types explore the google for it and how to use it
+</body>
+
+</html>

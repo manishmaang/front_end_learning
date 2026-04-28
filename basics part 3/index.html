@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leanring about images, tables and list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- src is the file path of image and alt is the text which appears with image sign when image is not able to be served in front end -->
+    <img src="GOKU.png" alt="son goku image" width="230">
+    <br>
+    <img src="nothing.png" alt="vegeta image">
+    <br>
+    <img src="hello.png" alt="">
+
+    <br>
+    <!-- br tag is used to add line break -->
+
+    <table>
+        <!-- thead groups the header content in table (isn't compulsory to use') -->
+        <thead>
+
+            <!-- defines the table caption -->
+            <caption>Employee details </caption>
+
+
+            <!-- tr stands for table row -->
+            <tr>
+                <!-- th stands for table head defined table header cells -->
+                <th>first name</th>                
+                <th>last name</th>                
+                <th>age</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- tbody groups the body content in table (isn't compulsory to use') -->
+            <tr>
+                <!-- td stands for table details define table cells (used to show row data) -->
+                <td>Manish</td>
+                <td>Pandey</td>
+                <td>21</td>
+            </tr>
+
+            <tr>
+                <!-- colspan is an attribute which means merge 2 columns to show single data expands the cell horizontally -->
+                <td colspan="2">Ayush</td>
+                
+                <!-- row span means merge 2 cells vertically to show single data -->
+                <td rowspan="2">20</td>
+            </tr>
+
+            <tr>
+                <!-- colspan is an attribute which means merge 2 columns to show single data expands the cell horizontally -->
+                <td colspan="2">Ayush</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- tfoot groups the footer content in table (isn't compulsory to use') -->
+        </tfoot>
+    </table>
+
+    <ul>
+        <li>nothing</li>
+        <li>here</li>
+    </ul>
+
+    <ul type="square">
+        <li>nothing</li>
+        <li>here</li>
+    </ul>
+
+    <ol>
+        <li>nothing</li>
+        <li>here</li>
+    </ol>
+</body>
+</html>
