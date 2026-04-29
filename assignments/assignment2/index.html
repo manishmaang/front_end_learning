@@ -4,26 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Multi Color Website</title>
+    <style>
+        :root {
+            --primary-color: rgb(89, 162, 186);
+            --text-color: rgb(5, 79, 76);
+            --bg-color: rgba(41, 121, 132, 0.849);
+        }
+
+        :root {
+            --primary-color: rgb(55, 160, 78);
+            --text-color: rgb(212, 234, 13);
+            --bg-color: rgba(18, 144, 94, 0.849);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul>li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        ul>li>a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        body{
+            background-color: var(--bg-color);
+        }
+
+        nav{
+            background-color: var(--primary-color);
+        }
+
+        
+    </style>
 </head>
 
 <body>
-    <div>
-        <img src="Asset 2.png" alt="Asset Image" height="200">
-        <h4>WELCOME !</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste natus magnam ullam, excepturi quod possimus
-            quisquam esse exercitationem sed culpa quos sapiente enim a explicabo voluptatem eos similique facilis
-            perferendis aliquid vitae beatae porro saepe voluptatum provident! Doloremque officiis illo recusandae qui
-            dolorem hic dignissimos!</p>
-    </div>
-
-    <ul>
-        <li>Login</li>
-        <li>Register</li>
-    </ul>
-
-
+    <header>
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 </body>
 
 </html>
