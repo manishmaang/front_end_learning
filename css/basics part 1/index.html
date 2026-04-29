@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX Model</title>
+    <style>
+        .box {
+            background-color: lightblue;
+        }
+
+        .box1 {
+            color: yellow;
+            border: 2px solid red;
+            height: 50px;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .box2 {
+            color: purple;
+            border: 2px solid black;
+            height: 50px;
+            padding: 10px;
+            margin: 2px;
+        }
+
+        ul {
+            list-style-type: disc;
+            /* restores bullets */
+            margin-left: 20px;
+            /* adds indentation */
+            padding-left: 15px;
+            /* ensures bullets are visible */
+            /* border: 2px solid green; */
+        }
+
+        .ul1{
+            background-color: lightgreen;
+            border: 2px solid green;
+            margin: 10px;
+        }
+
+        .ul2{
+            background-color: lightpink;
+            border: 2px solid pink;
+            margin: 20px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS BOX Model</h1>
+    </header>
+    <main>
+
+        <ul>
+            <li>
+                Every element in HTML is represented as a rectangular box, which consists of four areas: content,
+                padding, border, and margin. This is known as the CSS Box Model.
+            </li>
+        </ul>
+
+
+        <div class="box box1">
+            I'm div one.
+        </div>
+
+        <div class="box box2">
+            I'm div two.
+        </div>
+
+
+        <ul class="ul1">
+            <li>now by default browser adds the margin and padding and to remove it we use the * selector </li>
+            <li>box-sizing border box => if i write 100px for width, it will include padding and border in the width
+                otherwise that 100px will be the content width therefore in the universal model we use box-sizing:
+                border-box;</li>
+            <li>box sizing: border-box; agr likh diya to total height or widht content + padding + border milake
+                mani jayegi (no margin) agr esa nhi kiya to jb me height ya width likh raha hoon to wo content width
+                hi hoga (not including padding and border)</li>
+        </ul>
+
+        <ul class="ul2">
+            <li>margin collapse : agr top margin 1 element ka 10px hai and another box ka bottom margin 20 px hai to dono box ke beech 30px ka distance ya margin hona chahiye but hota sirf 20px ka hi kyuki margin collapse hota hai </li>
+            <li><img src="margin_collapse_image.png" alt=""></li>
+        </ul>
+
+
+    </main>
+</body>
+
+</html>
