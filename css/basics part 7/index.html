@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS POSITION PROPERTY</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            margin: 20px;
+        }
+
+        .box {
+            border: 2px solid purple;
+            width: 40vw;
+            height: 200px;
+            margin: 10px;
+        }
+
+        .box1 {
+            background-color: lightblue;
+            position: relative;
+            z-index: 1;
+            position: sticky;
+            top: 0px;
+        }
+
+        /* agr me nhi chata hu ki ye overlap ho to muje iski z-index increase karni padegi */
+
+
+        .box2 {
+            background-color: hotpink;
+            position: relative;
+            bottom: 40px;
+            left: 40px;
+        }
+
+        .box3 {
+            background-color: lightgreen;
+            position: absolute;
+            top: 0px;
+        }
+
+        .box4 {
+            background-color: bisque;
+            height: 1000px;
+            /* position: fixed;
+            top: 0px; */
+        }
+
+        .parent {
+            position: absolute;
+            width: 50vw;
+            height: 500px;
+            border: 2px solid red;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS POSITION PROPERTY</h1>
+    <ul>
+        <li>
+            static : default position hota hai aur isme element apne normal flow me rehta hai aur top right bottom left
+            properties kaam nhi krti hai and z-index kaam nhi krta hai.
+        </li>
+        <li>
+            relative : relative position ka matlab hai ki element apne normal position se kitna move hoga and iske liye
+            hum top right bottom left properties ka use krte hai and ye properties element ke normal position se hi
+            calculate hoti hai.
+            and ye sirf usi element ko move krta hai and uske siblings ko move nhi krta hai. (and if ye zyada move ho
+            jaye to siblinds ke upar bhi chala jata hai but it won't affect the siblings position)
+        </li>
+
+        <li>
+            absolute : absolute position ka matlab hai ki element apne nearest positioned ancestor se kitna move hoga
+            and iske liye hum top right bottom left properties ka use krte hai and ye properties element ke nearest
+            positioned ancestor se hi calculate hoti hai. (and if there is no positioned ancestor then it will be
+            relative to the initial containing block which is usually the html element) ;
+        </li>
+        <li style="color: red;">
+            agr parent ki position default set hai but mene parent me transform, filter or perspective property use kiya hai to bhi child element ka position absolute set karne par vo parent ke relative ho jayega instead of root html element.
+        </li>
+        <li>
+            When you set .box3 to position: absolute, it is taken out of the normal flow. That means it no longer pushes
+            or reserves space for itself — it just “floats” relative to its nearest positioned ancestor (or the <html>
+            element if none exists).
+        </li>
+        <li>
+            fixed : fixed position ka matlab hai ki element viewport se kitna move hoga and iske liye hum top right
+            bottom left properties ka use krte hai and ye properties element ke viewport se hi calculate hoti hai. (and
+            it will always stay in the same position even when the page is scrolled)
+        </li>
+
+        <li>
+            sticky : sticky position ka matlab hai ki element apne normal position se kitna move hoga and iske liye hum top
+            right bottom left properties ka use krte hai and ye properties element ke normal position se hi
+        </li>
+    </ul>
+
+    <div class="parent">
+        <div class="box1 box"></div>
+        <div class="box2 box"></div>
+        <div class="box3 box"></div>
+        <div class="box4 box"></div>
+    </div>
+</body>
+
+</html>
