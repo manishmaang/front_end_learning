@@ -4,26 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Implement the Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: red;
+            height: 10vh;
+            width: 100vw;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .parent1 {
+            background-color: black;
+            height: 90vh;
+            width: 100vw;
+            overflow: hidden;
+            /* overflow: auto; */
+        }
+
+        .box1 {
+            background-color: skyblue;
+            height: 50%;
+            width: 40%;
+            display: inline-block;
+            margin: 20px;
+            /* position: absolute; */
+            top: 10vh;
+            border-radius: 25px;
+        }
+
+        .box2 {
+            background-color: yellow;
+            height: 50%;
+            width: 40%;
+            display: inline-block;
+            margin: 20px;
+            border-radius: 25px;
+            /* position: absolute; */
+            left: 50%;
+            top: 10vh;
+            /* vertical-align: top; */
+        }
+
+        /* try to increase the height of blue box and then only apply margin in blue box then you will notice this happening or apply margin in both but keep the height of one element bigger than the other */
+        /* What you’re seeing is a side effect of how inline-block elements + margins + percentage heights interact with the parent.
+        🔎 Why the yellow box looks “pushed down”
+
+        Blue box (.box1) has height: 50%  
+That means it takes half of the parent’s height (200px out of 400px).
+Plus it has margin: 20px, so visually it sits lower than expected.
+
+Yellow box (.box2) is display: inline-block  
+Inline-block elements align themselves relative to the baseline of text. Since .box1 is taller, the yellow box is aligned lower to match that baseline. This makes it look like it has extra margin from the top.
+
+Margins don’t collapse horizontally  
+So the 20px margin on both boxes is applied separately, but the vertical alignment difference comes from inline-block baseline alignment.
+        */
+
+
+        .parent2 {
+            background-color: green;
+            height: 20vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        .text{
+            position: inline-block;
+            margin-left: 40%;
+        }
+
+        img{
+            height : 50px;
+            width: 50px;
+            position: fixed;
+            z-index: 1000;
+            top: 90%;
+            left: 90%;
+            border-radius: 50%;
+        }
+
+        .parent3{
+            background-color: skyblue;
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <img src="Asset 2.png" alt="Asset Image" height="200">
-        <h4>WELCOME !</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste natus magnam ullam, excepturi quod possimus
-            quisquam esse exercitationem sed culpa quos sapiente enim a explicabo voluptatem eos similique facilis
-            perferendis aliquid vitae beatae porro saepe voluptatum provident! Doloremque officiis illo recusandae qui
-            dolorem hic dignissimos!</p>
-    </div>
+    <nav>
+    </nav>
+    <main>
+        <div class="parent1">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <div class="parent2">
+            <div class="text">
+                <h3>Welcome to the css learning</h3>
+            </div>
+            <img src="Asset 2.png" alt="some image">
+        </div>
+        <div class="parent3">
 
-    <ul>
-        <li>Login</li>
-        <li>Register</li>
-    </ul>
-
-
+        </div>
 </body>
 
 </html>
