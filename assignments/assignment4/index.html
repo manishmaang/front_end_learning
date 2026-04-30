@@ -19,6 +19,10 @@
             gap: 20px;
         }
 
+        ul>li {
+            cursor: pointer;
+        }
+
         nav {
             background-color: antiquewhite;
             display: flex;
@@ -36,6 +40,78 @@
             padding: 5px 10px;
             border-radius: 5px;
         }
+
+        .container {
+            display: grid;
+            grid-template-areas: "card1 card2 card3"
+                "card4 card5 card6"
+                "card7 card8 card9"
+                "card10 missing missing";
+
+            width: 80%;
+            margin: 20px;
+            gap: 10px;
+        }
+
+        .card {
+            /* border: 2px solid black; */
+            border-radius: 10px;
+            display: grid;
+            grid-template-areas: "title title"
+                "sub_title sub_title"
+                "32bit 64bit";
+
+            text-align: center;
+            gap: 10px;
+            padding: 5px;
+            background-color: grey;
+            color: white;
+        }
+
+        .card_title {
+            grid-area: title;
+        }
+
+        .sub_title {
+            grid-area: sub_title;
+        }
+
+        .class32bit {
+            grid-area: 32bit;
+            background-color: skyblue;
+            border-radius: 10px;
+            margin-left: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .class64bit {
+            grid-area: 64bit;
+            background-color: green;
+            border-radius: 10px;
+            margin-right: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card {
+                grid-template-areas: "title"
+                    "sub_title"
+                    "32bit"
+                    "64bit";
+            }
+        }
     </style>
 </head>
 
@@ -52,7 +128,9 @@
                 <li>Support</li>
                 <li>Learn</li>
                 <li>Company</li>
-                <li><div class="d-button">Download</div></li>
+                <li>
+                    <div class="d-button">Download</div>
+                </li>
             </ul>
             <ul class="part3">
                 <li>🌐 English</li>
@@ -60,6 +138,61 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="card_title">English</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">Deutsh</div>
+                <div class="sub_title">nothing</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">Italiano</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">Espanol</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">francais</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">Portgues</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">English</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">English</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">English</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+            <div class="card">
+                <div class="card_title">English</div>
+                <div class="class32bit"><a href="ue_allinone.exe">Download 32-bit</a></div>
+                <div class="class64bit"><a href="ue_allinone.exe">Download 64-bit</a></div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

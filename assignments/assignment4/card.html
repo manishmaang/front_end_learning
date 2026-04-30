@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        .card {
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "title title"
+                "32bit 64bit";
+
+            text-align: center;
+            gap: 10px;
+            padding: 5px;
+            background-color: grey;
+            color: white;
+        }
+
+        .card_title {
+            grid-area: title;
+        }
+
+        .class32bit {
+            grid-area: 32bit;
+            background-color: skyblue;
+            border-radius: 10px;
+            margin-left: 5px;
+            padding: 10px;
+        }
+
+        .class64bit {
+            grid-area: 64bit;
+            background-color: green;
+            border-radius: 10px;
+            margin-right: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card_title">English</div>
+        <div class="class32bit">Download 32-bit</div>
+        <div class="class64bit">Download 64-bit</div>
+    </div>
+</body>
+
+</html>
