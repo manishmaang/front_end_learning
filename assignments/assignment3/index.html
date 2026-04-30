@@ -16,6 +16,12 @@
             background-color: red;
             height: 10vh;
             width: 100vw;
+            /* position: sticky;
+            top: 0;
+            z-index: 1000; */
+        }
+
+        header {
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -76,13 +82,13 @@ So the 20px margin on both boxes is applied separately, but the vertical alignme
             position: relative;
         }
 
-        .text{
+        .text {
             position: inline-block;
             margin-left: 40%;
         }
 
-        img{
-            height : 50px;
+        img {
+            height: 50px;
             width: 50px;
             position: fixed;
             z-index: 1000;
@@ -91,7 +97,7 @@ So the 20px margin on both boxes is applied separately, but the vertical alignme
             border-radius: 50%;
         }
 
-        .parent3{
+        .parent3 {
             background-color: skyblue;
             height: 100vh;
             width: 100vw;
@@ -100,8 +106,11 @@ So the 20px margin on both boxes is applied separately, but the vertical alignme
 </head>
 
 <body>
-    <nav>
-    </nav>
+    <!-- pehle nav me position sticky lgya tha but header upr chla gya tha isiliye kaam nhi kr rha tha -->
+    <header>
+        <nav>
+        </nav>
+    </header>
     <main>
         <div class="parent1">
             <div class="box1"></div>
