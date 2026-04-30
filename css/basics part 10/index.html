@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(166, 241, 210);
+        }
+
+        .box {
+            background-color: skyblue;
+            height: 30px;
+            width: 30px;
+            transition-property: transform;
+            transition-duration: 3s;
+            transition-delay: 1s;
+            /* transition-timing-function: ease-in-out; */
+            transition-timing-function: cubic-bezier(1,-0.84, 0.2, 0.48)
+        }
+
+        .translate_box {
+            /* translate x and y me jo values dete hai vo elements ke dimension ke hisb se kaam krti hai so abhi agr 10% diya hai to meaning only 3px move karega */
+            transform: translateX(200%) translateY(200%) scale(2) skewX(10deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>Transition</header>
+    <main>
+        <ul>
+            <li>Transition total 4 properties ko milke bnti hai</li>
+            <li>transition-property : on which property i want to apply transition</li>
+            <li>transition-duration : how long the transition should take</li>
+            <li>transition-delay : the time to wait before starting the transition</li>
+            <li>transition-timing-function : the speed curve of the transition</li>
+        </ul>
+
+        <div class="container">
+            <div class="box translate_box">
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
