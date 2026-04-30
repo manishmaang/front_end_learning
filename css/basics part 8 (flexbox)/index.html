@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            gap: 20px 10px;
+        }
+
+        .item {
+            border: 2px solid red;
+            width: 30px;
+            height: 30px;
+            background-color: violet;
+            /* margin: 10px; */
+        }
+
+        .order-1 {
+            order: -1;
+        }
+
+        ul {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FLEX BOX</h1>
+    </header>
+    <main>
+        <ul>
+            <li>display: flex; it should be applied to the parent container for flexbox behavior</li>
+            <li>flex-direction: row | column; controls the direction of the flex items</li>
+            <li>there are 2 axis: main axis and cross axis and justify content and align items works on them</li>
+            <li>justify content controls the alignment of flex items along the main axis</li>
+            <li style="font-weight: bold; color: rebeccapurple;">align items controls the alignment of flex items along
+                the cross axis and when there are multiple lines we use align-content.</li>
+            <li>when flex direction is row, the main axis is horizontal and the cross axis is vertical and when flex
+                direction is column, the main axis is vertical and the cross axis is horizontal</li>
+            <li>order property can be used to change the order of flex items and by default sbka order 0 hota hai jitna
+                km order vo sbse pehle</li>
+            <li>almost all of the properties are applid in the parent container so don't mix the parent's and child's
+                properties</li>
+
+                <li>flex grow, flex shrink, and flex basis control how flex items expand and shrink</li>
+
+        </ul>
+
+        <div class="container">
+            <div class="item ">1</div>
+            <div class="item ">2</div>
+            <div class="item ">3</div>
+            <div class="item ">4</div>
+            <div class="item order-1">5</div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+            <div class="item "></div>
+        </div>
+    </main>
+</body>
+
+</html>
