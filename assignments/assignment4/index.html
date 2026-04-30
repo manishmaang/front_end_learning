@@ -4,26 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>New Task</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav {
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 90px;
+            vertical-align: top;
+        }
+
+        .d-button {
+            background-color: rebeccapurple;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <img src="Asset 2.png" alt="Asset Image" height="200">
-        <h4>WELCOME !</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste natus magnam ullam, excepturi quod possimus
-            quisquam esse exercitationem sed culpa quos sapiente enim a explicabo voluptatem eos similique facilis
-            perferendis aliquid vitae beatae porro saepe voluptatum provident! Doloremque officiis illo recusandae qui
-            dolorem hic dignissimos!</p>
-    </div>
-
-    <ul>
-        <li>Login</li>
-        <li>Register</li>
-    </ul>
-
-
+    <header>
+        <nav>
+            <ul class="part1">
+                <li><img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_Site-Logo-1.png" alt="logo"></li>
+            </ul>
+            <ul class="part2">
+                <li>Products</li>
+                <li>Buy</li>
+                <li>Renew</li>
+                <li>Support</li>
+                <li>Learn</li>
+                <li>Company</li>
+                <li><div class="d-button">Download</div></li>
+            </ul>
+            <ul class="part3">
+                <li>🌐 English</li>
+                <li>🔍</li>
+            </ul>
+        </nav>
+    </header>
 </body>
 
 </html>
