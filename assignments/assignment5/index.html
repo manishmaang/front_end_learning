@@ -4,26 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CSS ANIMATIONS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 300px;
+            background-color: black;
+            position: relative;
+        }
+
+        .ball {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            /* animation-name: x_axis_animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite; */
+
+            animation: ball_bounce 1s ease-in-out infinite;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        @keyframes ball_bounce {
+            0%{
+                transform: translate(50px, -100px);
+            }
+
+            25%{
+                transform: translate(100px, 0px);
+            }
+
+            50%{
+                transform: translate(150px, -100px);
+            }
+
+            75%{
+                transform: translate(200px, 0px);
+            }
+
+            100%{
+                transform: translate(250px, -100px);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <img src="Asset 2.png" alt="Asset Image" height="200">
-        <h4>WELCOME !</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste natus magnam ullam, excepturi quod possimus
-            quisquam esse exercitationem sed culpa quos sapiente enim a explicabo voluptatem eos similique facilis
-            perferendis aliquid vitae beatae porro saepe voluptatum provident! Doloremque officiis illo recusandae qui
-            dolorem hic dignissimos!</p>
+    <div class="container">
+
+        <div class="ball">
+
+
+        </div>
+
     </div>
-
-    <ul>
-        <li>Login</li>
-        <li>Register</li>
-    </ul>
-
-
 </body>
 
 </html>
