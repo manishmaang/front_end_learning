@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.red_button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.language_dropdown{
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+/* Tumne .box ko position: absolute; top:0; diya hai.
+
+Jab koi element absolute hota hai aur uske parent (.parent) par position: relative nahi hota, toh wo body ke hisaab se position ho jaata hai.
+
+Is wajah se .box poore page ki height le raha hai, na ki sirf .parent ki 80vh height.
+
+if i remove the position relative from parent then .box will take 100% height of page*/
+.parent {
+    background-color: black;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/images/bg.jpg");
+    background-size: cover;
+    /* This tells the browser to scale the background image so that it completely covers the element (.parent in your case).
+
+The image will be resized proportionally (keeping its aspect ratio). */
+    background-position: center;
+    /* background-position: center ka matlab hai image ko box ke beech mein rakhna, aur agar crop karna pade toh dono side se barabar crop hoga.
+    similarly we have top meaning top section intact rahega and horizontally barabar cut hogi but vertically bottom se zyada kategi to keep the image intact */
+    opacity: 0.29;
+    position: absolute;
+    top: 0;
+}
+
+.nav_bar {
+    color: white;
+    /* background-color: white; */
+    width: 90%;
+    height: 62px;
+    /* chhoti screen pe bhi space milega */
+    max-width: 1200px;
+    /* bada screen pe limit */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.nav_bar img {
+    width: auto;
+    height: 30px;
+}
+
+.main_text{
+    text-align: center;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    height: 70%;
+    /* Jab tum .main_text ko height: 100% dete ho, wo apne parent (.parent, jo 80vh hai) ki poori height le leta hai.
+
+Aur tumne uske andar display: flex; justify-content: center; align-items: center; lagaya hai. Matlab ab wo apne content ko vertical aur horizontal center mein place karega. Isliye text neeche shift ho jaata hai, kyunki ab wo box ke beech mein aa gaya.
+
+Agar tum height nahi dete, toh .main_text sirf apne content jitni height rakhta hai. Us case mein flex centering ka vertical effect nahi hota, aur naturally text upar ki taraf chipak jaata hai. */
+gap: 20px;
+}
+
+.get_started{
+    margin: 20px auto;
+}
